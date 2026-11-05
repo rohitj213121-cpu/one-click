@@ -1,4 +1,17 @@
-let num1 = 100;
-let num2 = 200;
-let sum = num1 + num2;
-console.log("the total is",sum);
+const express = require ('express');
+
+
+
+const app = express ();
+
+
+const PORT = 5000;
+
+
+
+app.get('/', (req,res) => {
+     res.send ("<h1> hello rohit! your first express server is live.</h1>");
+}); 
+app.listen(PORT,() => {
+console.log("server is start");
+});
