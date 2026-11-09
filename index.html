@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Rohit's Task Manager </h1>
+    <h3>Today Task:</h3>
+    <ul>
+         <li>1. compelete Node.js & Express basic guide</li>
+         <li>2. push my project to Github respository</li>
+         <li>3. Practice API data transmission</li>
+         </ul>
+         <button oneclick="check()">Check Server Status</button>
+         <h3 id="res" style="color: green;"></h3>
+         <script>
+            async function check() {
+                let response = await fetch('/api/data');
+                let data = await response.json();
+                document.getElementById('res').innerText = data.servermessage;
+            }
+            </script>
+</body>
+</html>
